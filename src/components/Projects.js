@@ -19,6 +19,7 @@ export const Projects = () => {
       title: "Countries Project",
       description: "React , Express ,Postgresql and  Vanilla Css ",
       imgUrl: projImg2,
+      url:"https://github.com/gheios/PI-paises"
     },
    
     

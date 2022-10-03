@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle, Download } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import {saveAs} from "file-saver"
+
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -21,6 +23,11 @@ export const Banner = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
+
+   function downloadFile(){
+   saveAs("Brayan-Cv-Full.pdf")
+   }
+
 
   const tick = () => {
     let i = loopNum % toRotate.length;
@@ -58,7 +65,7 @@ export const Banner = () => {
                 <span className="tagline">Welcome to my Portfolio</span>
                 <h1>{`Hi! I'm Brayan Agudelo`} <span className="txt-rotate" dataPeriod="1000" data-rotate='["Full Stack Developer", "Front End Developer", "Back End Developer" ]'><span className="wrap">{text}</span></span></h1>
                   <p> The IT world is without a doubt my place, I love all the time challenging myself to overcome my ceiling. In programming I found the best version of myself, where I feel comfortable and I don't see it as a job but as a hobby where the possibility of growing motivates me all the time to be better.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={30} /></button>
+               <button onClick={downloadFile} da>Download  CV <ArrowRightCircle/><Download size={40}/></button>
               </div>}
             </TrackVisibility>
           </Col>

@@ -463,7 +463,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 .proj-txtx a:hover{
-  color: black;
+  color: #f8f8f8;
+  transition-duration: 2s;
+ 
 }
 .background-image-right {
   top: 20%;
