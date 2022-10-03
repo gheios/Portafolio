@@ -23,7 +23,7 @@ export const Banner = () => {
 
     return () => { clearInterval(ticker) };
   }, [text])
-
+ console.log(index)
    function downloadFile(){
    saveAs("Brayan-Cv-Full.pdf")
    }
