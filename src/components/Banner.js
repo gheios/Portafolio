@@ -25,7 +25,7 @@ export const Banner = () => {
   }, [text])
  console.log(index)
    function downloadFile(){
-   saveAs("Brayan-Cv-Full.pdf")
+   saveAs("Brayan-CV-Full.pdf")
    }
 
 
